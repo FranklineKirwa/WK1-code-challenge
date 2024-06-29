@@ -30,7 +30,9 @@ return {
     netsalary:netsalary
 };
 }
-let basicSalary=10000;
+
+
+let basicSalary=10000;//example basic salary
     let benefits = 5000;
     console.log("Net Salary:", income(basicSalary, benefits));
 
