@@ -13,7 +13,7 @@ function carLimit(){//creates a function  with a string -speed
 let demeritPoints;
 
   if (speed>70){
-          demeritPoints=Math.floor((speed-70)/5);//calculates points by dividing by int 5
+          demeritPoints=Math.floor((speed-70)/5);//calculates points  by dividing by int 5
 
        console.log(demeritPoints);
     }

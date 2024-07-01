@@ -30,7 +30,7 @@ function income() {// function with two inputs
 
 let nhif=basicSalary * 0.05;
 
-let nssf=basicSalary * 0.04;
+let nssf=basicSalary *  0.04;
 
 
 let netsalary=gross-paye-nhif-nssf;
