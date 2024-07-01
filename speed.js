@@ -4,7 +4,7 @@ function carLimit(){//creates a function  with a string -speed
 
  const input=prompt('Enter car speed:');//Requests user to enter car speed
 
- const speed=parseInt(input);
+ const speed=parseInt(input);//Allows speed as floating int.
 
  if (isNaN(speed) || speed <= 0) {
        return "Error! Please enter valid car speed.";//returns an error if car speed is not a number or negative
@@ -21,7 +21,7 @@ let demeritPoints;
         return "License suspended";
       }
   else {
-    return "OK";//returns "ok " message if speed is below the expected limit(70)
+    return "OK";//returns message if speed is below the expected limit(70).
   }
 
 }

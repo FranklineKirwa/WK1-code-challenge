@@ -4,7 +4,7 @@ function income() {// function with two inputs
 
     const basicSalary = parseFloat(prompt('Enter basic salary: '));// Prompt user for basic salary input
 
-    const benefits = parseFloat(prompt('Enter benefits: '));//rompt user for benefits input
+    const benefits = parseFloat(prompt('Enter benefits: '));//prompt user for benefits input
 
     let  gross= basicSalary + benefits;//calculates gross by adding basic salary and benefits
 
@@ -34,7 +34,7 @@ let nssf=basicSalary *  0.04;
 
 
 let netsalary=gross-paye-nhif-nssf;
-
+// Return an object with all calculated values
 return {
     gross: gross,
     paye: paye,
@@ -44,9 +44,9 @@ return {
 };
 }
 
-//Call the function and print the result
-let basicSalary=20000;//example basic salary
-    let benefits = 5000;
+//Calls  function and prints  result
+let basicSalary=0;
+let benefits=0;
     console.log("Net Salary:", income(basicSalary, benefits));
 
 
