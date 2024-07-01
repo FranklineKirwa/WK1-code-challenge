@@ -7,7 +7,7 @@ function  studentMarks(){
     const score=parseFloat(input);//changes input to floating number;
 
     if (isNaN(score)||score < 0 || score > 100) {   //checks whether the  input  is below 0 and or over 100 ,else if any condition is true, then pops an error message!
-        return "Error! Score should be between 0 and 100.";
+        return  "Error,Score is between 0 and 100.";
     }
     let grade;
     switch(true){
