@@ -2,18 +2,22 @@ function income(basicSalary, benefits) {// function with two inputs
     let  gross= basicSalary + benefits;//gross declaration
 
     let paye=0;
-    if(gross<24000){
-          paye=gross * 0.1;
-     }
-    else if(gross>24000 && gross<=32333){
-         paye=gross * 0.25;
-     }else if(gross>32334 && gross<500000){
-         paye=gross * 0.03;
-     }else if (gross>500001 && gross<800000){
-          paye=gross * 0.032;
-     }else {
-          paye=gross * 0.035;
-     }
+ 
+          switch(true){
+            case (gross<24000):
+                paye=gross*0.25;
+            case (gross>24000 && gross<=32333):
+                paye=gross*0.25;
+                break;
+            case (gross>32334 && gross<500000):
+                paye=gross*0.03;
+                break;
+            case (gross>500001 && gross<800000):
+                paye=ggross*0.032;
+                break;
+            default:
+                paye=gross*0.035;
+}
 
 let nhif=basicSalary * 0.05;
 
