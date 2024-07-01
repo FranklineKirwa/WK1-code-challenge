@@ -1,16 +1,29 @@
-function carLimit(speed){//creates a function  with a string -speed
-  let demeritPoints;
+const prompt=require('prompt-sync')({sigint:true});
+
+function carLimit(){//creates a function  with a string -speed
+
+ const input=prompt('Enter car speed:');//Requests user to enter car speed
+
+ const speed=parseInt(input);
+
+ if (isNaN(speed) || speed <= 0) {
+       return "Error! Please enter valid car speed.";//returns an error if car speed is not a number or negative
+}
+
+let demeritPoints;
 
   if (speed>70){
-    demeritPoints=Math.floor((speed-70)/5);//calculates points from the exctracted speed by dividing by int 5
+          demeritPoints=Math.floor((speed-70)/5);//calculates points by dividing by int 5
+
        console.log(demeritPoints);
     }
-    if(demeritPoints>12){//checks for exceeded points to return a value/message and prints out
-    console.log("License suspended");
+    if(demeritPoints>12){//checks if demerit points exceeds 12
+        return "License suspended";
       }
   else {
-    console.log("OK");//returns "ok " message if speed is below the expected limit(70)
+    return "OK";//returns "ok " message if speed is below the expected limit(70)
   }
 
 }
-console.log(carLimit(74));
+console.log(carLimit());
+

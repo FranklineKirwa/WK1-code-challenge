@@ -1,11 +1,20 @@
-function income(basicSalary, benefits) {// function with two inputs
-    let  gross= basicSalary + benefits;//gross declaration
+const prompt = require('prompt-sync')({ sigint: true });
 
+function income() {// function with two inputs
+
+    const basicSalary = parseFloat(prompt('Enter basic salary: '));// Prompt user for basic salary input
+
+    const benefits = parseFloat(prompt('Enter benefits: '));//rompt user for benefits input
+
+    let  gross= basicSalary + benefits;//calculates gross by adding basic salary and benefits
+
+
+    //Calculate PAYE based on gross salary using switch statement
     let paye=0;
 
           switch(true){
             case (gross<24000):
-                paye=gross*0.25;
+                paye=gross*0.10;
             case (gross>24000 && gross<=32333):
                 paye=gross*0.25;
                 break;
@@ -35,8 +44,8 @@ return {
 };
 }
 
-
-let basicSalary=10000;//example basic salary
+//Call the function and print the result
+let basicSalary=20000;//example basic salary
     let benefits = 5000;
     console.log("Net Salary:", income(basicSalary, benefits));
 

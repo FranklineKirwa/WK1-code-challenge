@@ -1,5 +1,12 @@
-function  studentMarks(score){
-    if (score < 0 || score > 100) {   //checks whether the input is below 0 and over 100 thus  will return an error!
+const prompt=require('prompt-sync')({sigint:true});
+
+function  studentMarks(){
+
+    let input=prompt("Enter score (between 0 and 100:");//Informs the user to enter the score
+
+    const score=parseFloat(input);//changes input to floating number;
+
+    if (isNaN(score)||score < 0 || score > 100) {   //checks whether the  input  is below 0 and or over 100 ,else if any condition is true, then pops an error message!
         return "Error! Score should be between 0 and 100.";
     }
     let grade;
@@ -20,6 +27,6 @@ function  studentMarks(score){
             grade="E";
             break;
     }
-    return `Your Grade:${grade}`
+    return `Your Grade:${grade}` //returns string displaying grade
 }
-console.log(studentMarks(150));
+console.log(studentMarks());
